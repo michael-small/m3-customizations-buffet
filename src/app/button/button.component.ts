@@ -5,13 +5,13 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {FormsModule} from "@angular/forms";
-import {MatOption, MatSelect} from "@angular/material/select";
+import {MatSelectModule} from "@angular/material/select";
 import {BasicControlsComponent} from "./controls/basic-controls.component";
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [MatButtonModule, MatDividerModule, MatIconModule, MatInputModule, MatFormFieldModule, FormsModule, MatSelect, MatOption, BasicControlsComponent],
+  imports: [MatButtonModule, MatDividerModule, MatIconModule, MatInputModule, MatFormFieldModule, FormsModule, MatSelectModule, BasicControlsComponent],
   template: `
     <section>
       <button mat-raised-button>Basic</button>
@@ -40,9 +40,9 @@ import {BasicControlsComponent} from "./controls/basic-controls.component";
     <app-basic-controls />
   `,
   host: {
-      '[style.--mdc-outlined-button-label-text-color]': "mdc_outlined_button_label_text_color()",
-      '[style.--mdc-outlined-button-label-text-size]': "mdc_outlined_button_label_text_size()",
-      '[style.--mdc-filled-button-label-text-size]': "mdc_filled_button_label_text_size()",
+    '[style.--mdc-outlined-button-label-text-color]': "mdc_outlined_button_label_text_color()",
+    '[style.--mdc-outlined-button-label-text-size]': "mdc_outlined_button_label_text_size()",
+    '[style.--mdc-filled-button-label-text-size]': "mdc_filled_button_label_text_size()",
   }
 })
 export class ButtonComponent {

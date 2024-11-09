@@ -2,7 +2,7 @@ import {Component, signal} from '@angular/core';
 import {MatFormField} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {FormsModule} from "@angular/forms";
-import {MatAnchor, MatButton} from "@angular/material/button";
+import {MatAnchor, MatButton, MatButtonModule} from "@angular/material/button";
 
 
 @Component({
@@ -12,8 +12,7 @@ import {MatAnchor, MatButton} from "@angular/material/button";
     MatFormField,
     MatSelectModule,
     FormsModule,
-    MatAnchor,
-    MatButton
+    MatButtonModule
   ],
   template: `
     <section id="Basic Button">
@@ -43,8 +42,7 @@ import {MatAnchor, MatButton} from "@angular/material/button";
           <mat-option value="4px">4px</mat-option>
           <mat-option value='12px'>12px</mat-option>
 
-          @let randomPx = $random() + 'px' ;
-          <mat-option [value]='randomPx'>Random: {{ randomPx }}</mat-option>
+          <mat-option [value]='$random'>Random: {{ $random() }}</mat-option>
         </mat-select>
       </mat-form-field>
     </section>
@@ -60,7 +58,7 @@ import {MatAnchor, MatButton} from "@angular/material/button";
   }
 })
 export class BasicControlsComponent {
-  $random = signal(String(Math.floor(Math.random() * 100)))
+  $random = signal(`${Math.floor(Math.random() * 100)}px`)
 
   $basicControls = {
     mdc_text_button_label_text_color: signal(''),
