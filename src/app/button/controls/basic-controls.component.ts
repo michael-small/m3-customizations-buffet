@@ -6,15 +6,15 @@ import {MatAnchor, MatButton, MatButtonModule} from "@angular/material/button";
 
 
 @Component({
-  selector: 'app-basic-controls',
-  standalone: true,
-  imports: [
-    MatFormField,
-    MatSelectModule,
-    FormsModule,
-    MatButtonModule
-  ],
-  template: `
+    selector: 'app-basic-controls',
+    standalone: true,
+    imports: [
+        MatFormField,
+        MatSelectModule,
+        FormsModule,
+        MatButtonModule,
+    ],
+    template: `
     <section id="Basic Button">
       <h2>Basic Button Settings</h2>
 
@@ -47,15 +47,15 @@ import {MatAnchor, MatButton, MatButtonModule} from "@angular/material/button";
       </mat-form-field>
     </section>
   `,
-  styles: `
+    styles: `
     :host {
       //--mat-text-button-horizontal-padding: '4px;',
     }
   `,
-  host: {
-    '[style.--mdc-text-button-label-text-color]': "$basicControls.mdc_text_button_label_text_color()",
-    '[style.--mat-text-button-horizontal-padding]': "$basicControls.mat_text_button_horizontal_padding()",
-  }
+    host: {
+        '[style.--mdc-text-button-label-text-color]': "$basicControls.mdc_text_button_label_text_color()",
+        '[style.--mat-text-button-horizontal-padding]': "$basicControls.mat_text_button_horizontal_padding()",
+    }
 })
 export class BasicControlsComponent {
   $random = signal(`${Math.floor(Math.random() * 100)}px`)

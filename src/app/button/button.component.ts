@@ -1,6 +1,6 @@
 import {Component, model, signal} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
-import {MatDividerModule} from "@angular/material/divider";
+import {MatDivider} from "@angular/material/divider";
 import {MatIconModule} from "@angular/material/icon";
 import {MatInputModule} from "@angular/material/input";
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -9,10 +9,10 @@ import {MatSelectModule} from "@angular/material/select";
 import {BasicControlsComponent} from "./controls/basic-controls.component";
 
 @Component({
-  selector: 'app-button',
-  standalone: true,
-  imports: [MatButtonModule, MatDividerModule, MatIconModule, MatInputModule, MatFormFieldModule, FormsModule, MatSelectModule, BasicControlsComponent],
-  template: `
+    selector: 'app-button',
+    standalone: true,
+    imports: [MatButtonModule, MatIconModule, MatInputModule, MatFormFieldModule, FormsModule, MatSelectModule, BasicControlsComponent, MatDivider],
+    template: `
     <section>
       <button mat-raised-button>Basic</button>
       <button mat-raised-button disabled>Disabled</button>
@@ -39,11 +39,11 @@ import {BasicControlsComponent} from "./controls/basic-controls.component";
 
     <app-basic-controls />
   `,
-  host: {
-    '[style.--mdc-outlined-button-label-text-color]': "mdc_outlined_button_label_text_color()",
-    '[style.--mdc-outlined-button-label-text-size]': "mdc_outlined_button_label_text_size()",
-    '[style.--mdc-filled-button-label-text-size]': "mdc_filled_button_label_text_size()",
-  }
+    host: {
+        '[style.--mdc-outlined-button-label-text-color]': "mdc_outlined_button_label_text_color()",
+        '[style.--mdc-outlined-button-label-text-size]': "mdc_outlined_button_label_text_size()",
+        '[style.--mdc-filled-button-label-text-size]': "mdc_filled_button_label_text_size()",
+    }
 })
 export class ButtonComponent {
   // empty string makes the var the default from Material
