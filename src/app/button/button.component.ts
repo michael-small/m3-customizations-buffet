@@ -13,6 +13,13 @@ import {BasicControlsComponent} from "./controls/basic-controls.component";
     standalone: true,
     imports: [MatButtonModule, MatIconModule, MatInputModule, MatFormFieldModule, FormsModule, MatSelectModule, BasicControlsComponent, MatDivider],
     template: `
+      <p>KEY (variant > token)</p>
+      <ul>
+        <li>Basic > text</li>
+        <li>Raised > protected</li>
+        <li>Stroked > outlined</li>
+        <li>Flat > filled</li>
+      </ul>
     <section>
       <button mat-raised-button>Basic</button>
       <button mat-raised-button disabled>Disabled</button>
